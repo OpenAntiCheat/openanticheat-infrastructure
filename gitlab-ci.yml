@@ -3,6 +3,14 @@ include:
     ref: OAC-62/setup-gitlabci-library
     file: /pipelines/terraform-pipeline.yml
 
-
 stages:
   - terraform
+
+workflow:
+  rules:
+    - if: $CI_COMMIT_BRANCH  # Run pipeline on any branch
+
+dummy-echo:
+  stage: terraform
+  script:
+    - echo "hello"
