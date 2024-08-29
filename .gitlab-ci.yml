@@ -1,0 +1,8 @@
+include:
+  - project: 'OpenAntiCheat/openanticheat-gitlabci-library'
+    ref: OAC-62/setup-gitlabci-library
+    file: /pipelines/terraform-pipeline.yml
+
+stages:
+  - terraform
+
